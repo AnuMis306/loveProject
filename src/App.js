@@ -17,7 +17,7 @@ function App() {
       <Helmet>
           {/* Set meta tag for viewport */}
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>My React App</title>
+          <title>Adarsh</title>
           {/* Additional head tags can be added here */}
         </Helmet>
       <Routes>
