@@ -8,7 +8,7 @@ import YouTube from 'react-youtube';
 const Page5 = () => {
 //youtube
     const videoOptions = {
-      height: '390',
+      height: '190',
       width: '640',
       playerVars: {
       autoplay: 1, // Auto play the video when it loads
@@ -17,7 +17,7 @@ const Page5 = () => {
 
   // Google Map container style
   const mapContainerStyle = {
-    width: '100%',
+    width: '80%',
     height: '450px',
   };
 

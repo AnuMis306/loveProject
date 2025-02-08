@@ -7,12 +7,19 @@ import Page4 from './Pages/Page4';
 import Page5 from './Pages/Page5';
 import PuzzleGame from './Pages/PuzzleGame';
 import FinalGame from './Pages/FinalGame';
+import { Helmet } from "react-helmet";
 
 function App() {
 
 
   return (
     <Router>
+      <Helmet>
+          {/* Set meta tag for viewport */}
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>My React App</title>
+          {/* Additional head tags can be added here */}
+        </Helmet>
       <Routes>
         <Route path="/" element={<Page1 />} />
         <Route path="/story" element={<Page2 />} />

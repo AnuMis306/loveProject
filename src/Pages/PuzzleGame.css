@@ -8,7 +8,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  width:2000px;
+  width:100%;
   opacity: 1.0;
   font-family:cursive;
   padding: 80px;
@@ -17,7 +17,7 @@
 body {
  
   height: 100%;
-  width:2000px;
+  width:100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,8 +33,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1500px;
-  height: 700px;
+  width: 100%;
+  height: 100%;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
@@ -46,12 +46,13 @@ body {
 
 /* Left side (instructions + button) */
 .left-side {
-  width: 50%;
+  width: 70%;
+  height:70%;
   padding: 30px;
   background-color: #f7f9fc;
   border-right: 2px solid #e1e4e8;
-  max-width: 100%;
-  height: 70%;
+  max-width: 70%;
+  max-height: 70%;
 }
 
 .how-to-play-btn {
@@ -116,17 +117,18 @@ body {
 .puzzle-container {
   
   display: grid;
-  grid-template-columns: repeat(3, 140px);
+  grid-template-columns: repeat(3, 80px);
   gap: 20px;
   justify-content: center;
   margin-top: 30px;
+  
   
 }
 
 /* Styling for each Sudoku cell */
 .cell {
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   font-size: 24px;
   text-align: center;
   border: 1px solid #ddd;
@@ -153,13 +155,14 @@ body {
 
 /* Win and Lose Messages */
 .right-side .win-message {
-  font-size: 24px; /* Adjust to the size you want */
+  font-size: 20px; /* Adjust to the size you want */
   font-weight: bold;
   color: #1f1e1e; /* You can change this color to match your design */
   text-align: center;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8); /* Optional: Add background */
   border-radius: 10px; /* Optional: Add rounded corners */
+  margin-top: 10;
 }
 .right-side .lose-message {
   font-size: 24px; /* Adjust to the size you want */

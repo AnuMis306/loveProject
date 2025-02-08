@@ -61,7 +61,7 @@ const PuzzleGame = () => {
       setTimeout(() => {
         
         setTimeout(() => navigate('/game3'), 1000);
-      }, 500);
+      },1000);
     } else if (isGridFilled()) {
       setGameStatus("lose");
       setTimeout(() => {

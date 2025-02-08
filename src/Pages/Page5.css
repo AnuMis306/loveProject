@@ -14,6 +14,7 @@ body {
   background-color: var(--cream);
   margin: 0;
   padding: 0;
+  width:100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
@@ -26,9 +27,10 @@ body {
   align-items: center;
   height: 100vh; /* Take full viewport height */
   width: 100%;
-  max-width: none;
+  max-width: 100%;
   display:flex;
   flex-direction:column;
+  margin-top:40px;
 }
 
 .grid-container {
@@ -36,9 +38,9 @@ body {
   grid-template-columns: 1fr 1fr; /* 2 equal columns */
   grid-template-rows: 1fr 1fr; /* 2 equal rows */
   width: 100%;
-  height: 90%;
-  max-width: 3000px; /* Limit the max width of the grid */
-  grid-gap: 40px; /* Space between the sections */
+  height: 85%;
+  max-width: 100%; /* Limit the max width of the grid */
+  grid-gap: 10px; /* Space between the sections */
 }
 
 /* Section Styles */
@@ -63,15 +65,16 @@ body {
 
 .header-title {
   font-family: 'Dancing Script', cursive;
-  font-size: 3em;
+  font-size: 1em;
   color: var(--dark-gray);
+
   
 }
 
 .header p1 {
   font-family: 'Dancing Script', cursive;
-  font-size: 1.2em;
-  margin-top: 10px;
+  font-size: 1.0em;
+  margin-top: 5px;
   color:  #000000;
   text-align: left;
   animation: slideInFromLeft 2s ease-out;
@@ -79,8 +82,8 @@ body {
 
 .header p{
   font-family: 'Dancing Script', cursive;
-  font-size: 1.2em;
-  margin-top: 10px;
+  font-size: 0.8em;
+  margin-top: 5px;
   color: #000000;
   text-align: left;
   animation: slideInFromLeft 2s ease-out;
@@ -92,11 +95,12 @@ body {
 .video-container {
   position: relative;
   width: 100%;
-  height: 500px;  /* Set a fixed height to ensure the container is visible */
+  height: 0; /* Set a fixed height to ensure the container is visible */
   max-width: 100%;
+  padding-bottom: 30.25%;
   margin: 0 auto;
   background-color: #000;  /* Ensure background is set for visibility */
-  overflow: hidden;  /* Prevent the video from overflowing the container */
+  overflow: visible;  /* Prevent the video from overflowing the container */
 }
 
 
@@ -121,12 +125,11 @@ body {
 
 .quote-section h3 {
   font-family: 'Dancing Script', cursive;
-  font-size: 2em;
-  font-size: 1.25em;
+  font-size: 1.2em;
   color: var(--dark-gray);
-  max-width: 80%;
-  margin: 20px auto;
-  padding: 20px;
+  max-width: 100%;
+  margin: 10px auto;
+  padding: 10px;
   background-color: var(--cream);
   border-left: 5px solid var(--gold);
   font-style: italic;
@@ -137,8 +140,8 @@ body {
   font-size: 1.25em;
   color: var(--dark-gray);
   max-width: 80%;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 10px auto;
+  padding: 10px;
   background-color: var(--cream);
   border-left: 5px solid var(--gold);
   font-style: italic;
@@ -157,17 +160,20 @@ body {
 }
 
 .memory-map iframe {
+  width:100%;
+  height:100%;
   max-width: 100%;
   border-radius: 8px;
   border: 2px solid var(--gold);
+  padding: 10px;
 }
 
 /* Footer */
 .footer {
   background: var(--soft-red);
   color: var(--cream);
-  margin: 5px;
-  padding: 15px;
+  margin: 2px;
+  padding: 5px;
   text-align: center;
 }
 
