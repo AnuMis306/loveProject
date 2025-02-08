@@ -1,0 +1,44 @@
+/* src/Pages/Page2.css */
+.page2-container {
+  background: url('assets\\love-background5.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity:1.0;
+}
+
+.story-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.story-text h2 {
+  margin-left:15px;
+  font-size: 2.5rem;
+  color: #fffdfd;
+  font-family:cursive;
+}
+
+.story-text p {
+  font-size: 1.9rem;
+  color: #ffffff;
+  font-family:cursive;
+  margin-top: 50px;
+}
+
+
+.continue-btn {
+  background-color: #ff69b4;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 100px;
+}

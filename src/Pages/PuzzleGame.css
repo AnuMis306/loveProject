@@ -1,0 +1,280 @@
+
+/* General container styling */
+.app-container {
+  
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width:2000px;
+  opacity: 1.0;
+  font-family:cursive;
+  padding: 80px;
+  
+}
+body {
+ 
+  height: 100%;
+  width:2000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity:1.0;
+  }
+
+
+/* The wrapper for the entire game, ensuring the content is centered */
+.puzzle-wrapper {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1500px;
+  height: 700px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: To give a slight background color to the content */
+  border-radius: 15px;
+}
+
+
+
+/* Left side (instructions + button) */
+.left-side {
+  width: 50%;
+  padding: 30px;
+  background-color: #f7f9fc;
+  border-right: 2px solid #e1e4e8;
+  max-width: 100%;
+  height: 70%;
+}
+
+.how-to-play-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+
+.how-to-play-btn:hover {
+  background-color: #0056b3;
+}
+
+/* How to Play section styling */
+.how-to-play {
+  font-size: 22px;
+  color: #555;
+}
+
+.how-to-play h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+  font-family:cursive;
+}
+
+.how-to-play ul {
+  font-size: 18px;
+  list-style-type: square;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.how-to-play p {
+  font-size: 20px;
+  color: #af7ab9;
+  margin-top: 15px;
+  font-family:cursive;
+}
+
+/* Right side (puzzle grid) */
+.right-side {
+  width:60%;
+  height:100%;
+  padding: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Puzzle grid container */
+.puzzle-container {
+  
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  
+}
+
+/* Styling for each Sudoku cell */
+.cell {
+  width: 160px;
+  height: 160px;
+  font-size: 24px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: background-color 0.2s ease, border 0.2s ease;
+}
+
+.cell:focus {
+  outline: none;
+  border: 2px solid #007bff;
+  background-color: #e6f7ff;
+}
+
+.cell:invalid {
+  border-color: #ff4d4d;
+}
+
+/* Styling for pre-filled (disabled) cells */
+.cell.disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+/* Win and Lose Messages */
+.right-side .win-message {
+  font-size: 24px; /* Adjust to the size you want */
+  font-weight: bold;
+  color: #1f1e1e; /* You can change this color to match your design */
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add background */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+.right-side .lose-message {
+  font-size: 24px; /* Adjust to the size you want */
+  font-weight: bold;
+  color: #1f1e1e; /* You can change this color to match your design */
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add background */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .puzzle-wrapper {
+    flex-direction: column;
+    background: url('assets\\love-background.jpg') no-repeat center center fixed;
+  }
+
+  .left-side, .right-side {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #e1e4e8;
+  }
+
+  .puzzle-container {
+    grid-template-columns: repeat(3, 100px);
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .how-to-play-btn {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .puzzle-container {
+    grid-template-columns: repeat(3, 50px);
+    gap: 6px;
+  }
+
+  .cell {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .how-to-play-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .how-to-play {
+    padding: 12px;
+  }
+  .check-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: all 0.3s;
+  }
+  
+  .check-button:hover {
+    background-color: #218838;
+  }
+  
+
+.try-again-button {
+  background-color: #f0ad4e;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+.try-again-button:hover {
+  background-color: #ec971f;
+}
+
+
+.win-message, .lose-message {
+  font-size: 150px;
+  font-weight: bold;
+  color: #28a745;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.lose-message {
+  color: #dc3545;
+}
+
+  
+}

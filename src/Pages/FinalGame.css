@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: url('assets\\love-background2.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  position: relative;
+  max-width: 3000px;
+}
+
+.valentine-container {
+  
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 20000px;
+  position: relative;
+}
+
+.title {
+  font-size: 2rem;
+  color: #faf6f7;
+  font-weight: bold;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-out;
+  font-style: cursive;
+}
+
+.heart-container {
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.heart {
+  color: #f1e7eb;
+  animation: float 3s ease-in-out infinite;
+}
+
+.zoom-in {
+  animation: zoomIn 1s ease;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.yes-button {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.no-button {
+  background-color: #ff4f5d;
+  color: white;
+  transition: transform 0.1s ease-in-out; /* Smooth movement transition */
+}
+
+button:hover {
+  background-color: #d14d72;
+}
+
+.response {
+  margin-top: 30px;
+}
+
+.response-text {
+  font-size: 1.5rem;
+  color: #f8f3f5;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.5s;
+  z-index: 9999;
+}
+
+.curtain.open {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.curtain-prompt {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.valentine-container {
+  text-align: center;
+  position: relative;
+}
+
+.heart-container {
+  margin-top: 20px;
+}
+
+.heart {
+  font-size: 50px;
+  color: red;
+}
+
+.zoom-in {
+  animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0.5); }
+  100% { transform: scale(1); }
+}
+
+.title {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.yes-button,
+.no-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.yes-button {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.no-button {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.response {
+  margin-top: 20px;
+}
+
+.response-text {
+  font-size: 20px;
+  font-weight: bold;
+}
